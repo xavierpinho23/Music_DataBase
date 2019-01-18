@@ -1,0 +1,12 @@
+This projet has the aim to create a music management and sharing system, with the possibility to share files between users 
+The system has all the relevant information about music like author, albumns, musical groups, concerts, etc.
+The users can also make critics to albums.
+The user can search musics by any of the characteristics.
+The users with editing ability (editors) can add or remove albums and musics.
+Each user can create his own playlists and transfer musical files that can also share with other users.
+
+------------------------------------------------------------------------------------------------------------------------------------
+Work made using Python and PostgreSQL.
+Authors: Xavier Pinho and Jorge Melo (@/jorgegomelo)
+Course: Data Bases and Information Analysis, University of Coimbra, 2018/2019.
+
