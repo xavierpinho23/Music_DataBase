@@ -1,0 +1,11 @@
+How to use:
+
+You have to have on your computer the following programs: PostgreSQL, PgAdmin and python (package: psycopg2).
+
+1) Go to pgAdmin and create a database.
+   Use your settings (host, database, user, password) and edit the file settings.py
+   Select your database, press "query tool" and paste the information in file script_sql_final.txt
+   Press "query tool" again and paste the information in file insert_data.txt
+
+2) Run the file main.py from your command line (go to the directory where the file is and write python main.py) and enjoy!
+
