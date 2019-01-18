@@ -5,8 +5,12 @@ The user can search musics by any of the characteristics.
 The users with editing ability (editors) can add or remove albums and musics.
 Each user can create his own playlists and transfer musical files that can also share with other users.
 
+(You can try the application in folder "Part2", for more information consult "How to use" located in folder "Part2").
+
 --------------------------------------------------------------------------------------------------------------------------------
 Work made using Python and PostgreSQL.
 Authors: Xavier Pinho and Jorge Melo (@/jorgegomelo)
 Course: Data Bases and Information Analysis, University of Coimbra, 2018/2019.
+--------------------------------------------------------------------------------------------------------------------------------
+
 
