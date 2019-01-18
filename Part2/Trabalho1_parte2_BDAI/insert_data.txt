@@ -1,0 +1,92 @@
+# File to insert automatically some data
+
+INSERT INTO musica
+VALUES(DEFAULT,'prison song', 'they try to build a prison', '07:34');
+
+INSERT INTO musica
+VALUES(DEFAULT,'eulogy', 'aeiou','05:35');
+
+INSERT INTO genero_musica
+VALUES(1,1);
+
+INSERT INTO genero_musica
+VALUES(2,2);
+
+INSERT INTO genero
+VALUES (DEFAULT, 'rock', 'rock and roll from 70s');
+
+INSERT INTO genero
+VALUES(DEFAULT,'metal', 'dark and black');
+
+INSERT INTO concerto
+VALUES(DEFAULT,'woodstock', '10-10-1999','california',10000);
+
+INSERT INTO posmusicaconcerto
+VALUES(1,1,1);
+
+INSERT INTO posmusicaconcerto
+VALUES(2,1,2);
+
+INSERT INTO album
+VALUES(DEFAULT,'undertow','01-02-1990','intolerance into sound', '69:13');
+
+INSERT INTO album
+VALUES(DEFAULT,'Mesmerize','02-03-1987','no more war','55:01')
+
+INSERT INTO posmusicaalbum
+VALUES(1,1,2);
+
+INSERT INTO posmusicaalbum
+VALUES(1,2,1);
+
+INSERT INTO critica
+VALUES('good music', 9, 1,1);
+
+INSERT INTO critica
+VALUES('wow', 8, 1, 2)
+
+INSERT INTO utilizador
+VALUES(DEFAULT,'Platao','123','400 AC', 'admin');
+
+INSERT INTO artista_musica
+VALUES(1,1);
+
+INSERT INTO artista_musica
+VALUES(2,2);
+
+INSERT INTO artista
+VALUES(DEFAULT, 'SOAD', '10-12-1980','Armenia', 'band','against war');
+
+INSERT INTO artista
+VALUES(DEFAULT, 'TOOL', '10-12-1980','USA', 'band','high consciousness level');
+
+INSERT INTO participa
+VALUES('10-10-1000','10-10-1001',1);
+
+INSERT INTO artista_album
+VALUES(2,1);
+
+INSERT INTO artista_album
+VALUES(1,2);
+
+INSERT INTO artista_concerto
+VALUES(1,1);
+
+INSERT INTO artista_concerto
+VALUES(1,1);
+
+INSERT INTO playlist
+VALUES('public','top 10', '15-01-1996',1, 1);
+
+INSERT INTO posmusicaplaylist
+VALUES(1,1,1);
+
+INSERT INTO download
+VALUES('10-10-1500',1,2);
+
+INSERT INTO download_utilizador
+VALUES(1,2,1);
+
+insert into utilizador
+values(DEFAULT, 'Socrates', '321', '410 AC', 'user');
+

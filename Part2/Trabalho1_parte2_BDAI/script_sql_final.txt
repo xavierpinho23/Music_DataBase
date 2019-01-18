@@ -1,0 +1,134 @@
+CREATE TABLE musica (
+	id	 SERIAL,
+	nome	 VARCHAR(512),
+	letra	 VARCHAR(512),
+	duracao VARCHAR(512),
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE album (
+	id	 SERIAL,
+	nome	 VARCHAR(512),
+	data	 VARCHAR(512),
+	descricao VARCHAR(512),
+	duracao	 VARCHAR(512),
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE artista (
+	id		 SERIAL,
+	nome		 VARCHAR(512),
+	data_nascimento	 VARCHAR(512),
+	local_nascimento VARCHAR(512),
+	tipo		 VARCHAR(512),
+	descricao	 VARCHAR(512),
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE playlist (
+	tipo		 VARCHAR(512),
+	nome		 VARCHAR(512),
+	data_criacao	 VARCHAR(512),
+	id		 SERIAL,
+	utilizador_id INTEGER NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE utilizador (
+	id		 SERIAL,
+	nome	 VARCHAR(512) NOT NULL,
+	password	 VARCHAR(512) NOT NULL,
+	data_entrada VARCHAR(512),
+	tipo	 VARCHAR(512),
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE critica (
+	texto	 VARCHAR(512),
+	pontuacao	 FLOAT(8),
+	utilizador_id INTEGER,
+	album_id	 INTEGER,
+	PRIMARY KEY(utilizador_id,album_id)
+);
+
+CREATE TABLE concerto (
+	id_concerto SERIAL,
+	nome	 VARCHAR(512),
+	data	 VARCHAR(512),
+	lugar	 VARCHAR(512),
+	ocupacao	 INTEGER,
+	PRIMARY KEY(id_concerto)
+);
+
+CREATE TABLE posmusicaplaylist (
+	indice	 INTEGER,
+	playlist_id INTEGER,
+	musica_id	 INTEGER,
+	PRIMARY KEY(playlist_id,musica_id)
+);
+
+CREATE TABLE download (
+	data		 VARCHAR(512),
+	utilizador_id INTEGER,
+	musica_id	 INTEGER,
+	PRIMARY KEY(utilizador_id,musica_id)
+);
+
+CREATE TABLE genero (
+	id	 SERIAL,
+	nome	 VARCHAR(512),
+	descricao VARCHAR(512),
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE posmusicaconcerto (
+	indice		 INTEGER,
+	concerto_id_concerto INTEGER,
+	musica_id		 INTEGER,
+	PRIMARY KEY(concerto_id_concerto,musica_id)
+);
+
+CREATE TABLE posmusicaalbum (
+	indice	 INTEGER,
+	album_id	 INTEGER,
+	musica_id INTEGER,
+	PRIMARY KEY(album_id,musica_id)
+);
+
+CREATE TABLE participa (
+	data_entrada VARCHAR(512),
+	data_saida	 VARCHAR(512),
+	artista_id	 INTEGER,
+	PRIMARY KEY(artista_id)
+);
+
+CREATE TABLE download_utilizador (
+	download_utilizador_id INTEGER,
+	download_musica_id	 INTEGER,
+	utilizador_id		 INTEGER,
+	PRIMARY KEY(download_utilizador_id,download_musica_id,utilizador_id)
+);
+
+CREATE TABLE artista_album (
+	artista_id INTEGER,
+	album_id	 INTEGER,
+	PRIMARY KEY(artista_id,album_id)
+);
+
+CREATE TABLE artista_concerto (
+	artista_id		 INTEGER,
+	concerto_id_concerto INTEGER,
+	PRIMARY KEY(artista_id,concerto_id_concerto)
+);
+
+CREATE TABLE genero_musica (
+	genero_id INTEGER,
+	musica_id INTEGER,
+	PRIMARY KEY(genero_id,musica_id)
+);
+
+CREATE TABLE artista_musica (
+	artista_id INTEGER,
+	musica_id	 INTEGER,
+	PRIMARY KEY(artista_id,musica_id)
+);
